@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site d'actualités, de podcasts et de découvertes numériques.">
+    <title>Le Média Digital - Actualités et Podcasts</title>
+</head>
+
+<body>
+
+    <!-- En tête de la page-->
+
+    <header id="main-header">
+
+        <!-- Logo vectoriel SVG -->
+        <svg class="site-logo" width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Le Média Digital">
+
+            <rect x="5" y="5" width="110" height="70" rx="10" fill="#263B55"/>
+
+            <circle cx="40" cy="40" r="20" fill="#F4B942"/>
+
+            <rect x="70" y="25" width="30" height="30" fill="#FFFFFF"/>
+
+        </svg>
+
+        <h1>Le Média Digital</h1>
+
+        <!-- Menu de navigation -->
+        <nav class="navbar" aria-label="Navigation principale">
+
+            <ul class="nav-list">
+
+                <li class="nav-item">
+                    <a href="#accueil">Accueil</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#latest-posts">Actualités</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#media-center">Podcast</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#main-footer">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Contenu princiapale-->
+
+    <main id="main-content">
+
+        <!-- SECTION 1 : Présentation -->
+        <section id="hero-section">
+
+            <h2>Bienvenue sur Le Média Digital</h2>
+
+            <p>
+                Découvrez un espace consacré à l'information,
+                à la culture numérique et aux nouvelles technologies.
+                Notre objectif est de proposer un contenu
+                <mark>accessible</mark> et <mark>innovant</mark>
+                pour tous les passionnés du numérique.
+            </p>
+
+            <p>
+                Nous proposons des articles, des interviews et
+                des podcasts consacrés au monde du digital.
+                Notre équipe utilise les technologies
+                <abbr title="HyperText Markup Language">HTML</abbr>
+                pour structurer ses publications.
+
+                <br>
+
+                Explorez nos différentes rubriques et restez
+                informés des dernières tendances.
+            </p>
+
+            <!-- Vidéo de présentation -->
+            <video class="promo-video" width="640" height="360" controls poster="images/présentation.jpg">
+
+                <source src="vidéos/Présentation.mp4" type="video/mp4">
+
+                <track src="substitles/présentation-fr.vtt" kind="subtitles" srclang="fr" label="Français" default>
+
+                Votre navigateur ne prend pas en charge
+                la lecture de cette vidéo.
+
+            </video>
+
+        </section>
+
+
+        <!-- SECTION 2 : Actualités -->
+        <section id="latest-posts">
+
+            <h2>Dernières actualités</h2>
+
+            <!-- ARTICLE 1 -->
+            <article class="post-card">
+
+                <header>
+
+                    <h3>L'intelligence artificielle en 2026</h3>
+
+                    <p>
+                        Publié le
+                        <time class="post-date" datetime="2026-01-15">
+                            15 janvier 2026
+                        </time>
+                    </p>
+
+                </header>
+
+                <figure class="post-thumbnail">
+
+                    <img src="images/ia.jpg" alt="Illustration de l'intelligence artificielle" width="400" height="250">
+
+                    <figcaption>
+                        L'intelligence artificielle transforme
+                        notre quotidien.
+                    </figcaption>
+
+                </figure>
+
+                <p>
+                    L'intelligence artificielle occupe une place
+                    grandissante dans notre société. Elle transforme
+                    de nombreux secteurs comme la santé,
+                    l'éducation et l'industrie.
+                </p>
+
+                <footer>
+
+                    <ul>
+                        <li>Technologie</li>
+                        <li>Intelligence artificielle</li>
+                        <li>Innovation</li>
+                    </ul>
+
+                    <a href="articles/intelligence-artificielle.html">
+                        Lire la suite
+                    </a>
+
+                </footer>
+
+            </article>
+
+
+            <!-- ARTICLE 2 -->
+            <article class="post-card">
+
+                <header>
+
+                    <h3>Les tendances du développement web</h3>
+
+                    <p>
+                        Publié le
+                        <time class="post-date" datetime="2026-02-10">
+                            10 février 2026
+                        </time>
+                    </p>
+
+                </header>
+
+                <figure class="post-thumbnail">
+
+                    <img src="images/developpement-web.png" alt="Écran présentant du code informatique" width="400" height="250">
+
+                    <figcaption>
+                        Les nouvelles technologies du développement web.
+                    </figcaption>
+
+                </figure>
+
+                <p>
+                    Le développement web évolue constamment.
+                    Les développeurs utilisent de nouveaux outils
+                    et frameworks pour concevoir des sites
+                    toujours plus performants.
+                </p>
+
+                <footer>
+
+                    <ul>
+                        <li>Développement</li>
+                        <li>Web</li>
+                        <li>Programmation</li>
+                    </ul>
+
+                    <a href="articles/developpement-web.html">
+                        Lire la suite
+                    </a>
+
+                </footer>
+
+            </article>
+
+
+            <!-- ARTICLE 3 -->
+            <article class="post-card">
+
+                <header>
+
+                    <h3>La cybersécurité : un enjeu majeur</h3>
+
+                    <p>
+                        Publié le
+                        <time class="post-date" datetime="2026-03-05">
+                            5 mars 2026
+                        </time>
+                    </p>
+
+                </header>
+
+                <figure class="post-thumbnail">
+
+                    <img src="images/cybersécurité.jpg" alt="Illustration représentant un cadenas numérique" width="400" height="250">
+
+                    <figcaption>
+                        La protection des données personnelles.
+                    </figcaption>
+
+                </figure>
+
+                <p>
+                    La cybersécurité est devenue indispensable
+                    face à l'augmentation des cyberattaques.
+                    La protection des données est désormais
+                    une priorité pour les entreprises.
+                </p>
+
+                <footer>
+
+                    <ul>
+                        <li>Sécurité</li>
+                        <li>Internet</li>
+                        <li>Protection</li>
+                    </ul>
+
+                    <a href="articles/cybersecurite.html">
+                        Lire la suite
+                    </a>
+
+                </footer>
+
+            </article>
+
+
+            <!-- ARTICLE 4 -->
+            <article class="post-card">
+
+                <header>
+
+                    <h3>Le numérique au service de l'éducation</h3>
+
+                    <p>
+                        Publié le
+                        <time class="post-date" datetime="2026-04-12">
+                            12 avril 2026
+                        </time>
+                    </p>
+
+                </header>
+
+                <figure class="post-thumbnail">
+
+                    <img src="images/education-numérique.jpg" alt="Étudiant utilisant un ordinateur portable" width="400" height="250">
+
+                    <figcaption>
+                        Les outils numériques dans l'apprentissage.
+                    </figcaption>
+
+                </figure>
+
+                <p>
+                    Les outils numériques permettent de développer
+                    de nouvelles méthodes d'apprentissage.
+                    Les plateformes éducatives rendent
+                    les connaissances plus accessibles.
+                </p>
+
+                <footer>
+
+                    <ul>
+                        <li>Éducation</li>
+                        <li>Numérique</li>
+                        <li>Apprentissage</li>
+                    </ul>
+
+                    <a href="articles/education-numerique.html">
+                        Lire la suite
+                    </a>
+
+                </footer>
+
+            </article>
+
+        </section>
+
+
+        <!-- SECTION 3 : PODCAST ET TRANSCRIPTIONS -->
+        <section id="media-center">
+
+            <h2>Espace Podcast et Transcriptions</h2>
+
+            <!-- Lecteur audio -->
+            <audio class="podcast-player" controls>
+
+                <source src="audios/podcast.mp3" type="audio/mpeg">
+
+                Votre navigateur ne prend pas en charge
+                la lecture audio.
+
+            </audio>
+
+            <!-- Bloc de transcription interactif -->
+            <details>
+
+                <summary>Afficher la transcription</summary>
+
+                <div class="transcript-box">
+
+                    <dl>
+
+                        <dt>Animateur 1 :</dt>
+                        <dd> Bonjour à tous et bienvenue dans notre podcast consacré aux nouvelles technologies.</dd>
+
+                        <dt>Invité 1:</dt>
+                        <dd> Bonjour ! Je suis ravi de participer à cette émission. </dd>
+
+                        <dt>Animateur 2 :</dt>
+                        <dd> Selon vous, quelle est la principale évolution
+                            technologique de ces dernières années ?</dd>
+
+                        <dt>Invité 2:</dt>
+                        <dd>Je pense que l'intelligence artificielle représente une transformation majeure dans de nombreux domaines.</dd>
+
+                    </dl>
+
+                </div>
+
+            </details>
+
+        </section>
+
+
+        <!-- SECTION 4 : DONNÉES STATISTIQUES -->
+        <section id="authors-ranking">
+
+            <h2>Classement de nos rédacteurs</h2>
+
+            <table class="data-table">
+
+                <caption>
+                    Classement des rédacteurs et nombre d'articles publiés
+                </caption>
+
+                <!-- En-tête du tableau -->
+                <thead>
+
+                    <tr>
+                        <th scope="col">Rang</th>
+                        <th scope="col">Rédacteur</th>
+                        <th scope="col">Spécialité</th>
+                        <th scope="col">Articles publiés</th>
+                    </tr>
+
+                </thead>
+
+                <!-- Corps du tableau -->
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Marie Dupont</td>
+                        <td>Technologie</td>
+                        <td>45</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Lucas Martin</td>
+                        <td>Cybersécurité</td>
+                        <td>38</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Emma Bernard</td>
+                        <td>Intelligence artificielle</td>
+                        <td>32</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Thomas Petit</td>
+                        <td>Développement web</td>
+                        <td>25</td>
+                    </tr>
+
+                </tbody>
+
+                <!-- Pied du tableau -->
+                <tfoot>
+
+                    <tr>
+                        <td colspan="3">
+                            Total des articles publiés
+                        </td>
+
+                        <td>140</td>
+                    </tr>
+
+                </tfoot>
+
+            </table>
+
+        </section>
+
+
+        <!-- SECTION 5 : INTERACTIVITÉ VISUELLE -->
+        <section id="interactive-zone">
+
+            <h2>Explorez notre carte interactive</h2>
+
+            <!-- Image associée à une carte d'interaction -->
+            <img src="images/carte-interactive.jpg" alt="Carte interactive présentant deux zones" usemap="#interactive-map" width="600" height="350">
+
+            <map name="interactive-map">
+
+                <!-- Zone rectangulaire -->
+                <area shape="rect" coords="20,20,250,150" href="#latest-posts" alt="Accéder aux actualités" title="Actualités">
+
+                <!-- Zone circulaire -->
+                <area shape="circle" coords="400,180,70" href="#media-center" alt="Accéder aux podcasts" title="Podcasts">
+
+            </map>
+
+
+            <!-- Canvas réservé au futur graphique JavaScript -->
+            <h3>Statistiques du site</h3>
+
+            <canvas class="stats-canvas" width="400" height="200">
+
+                Votre navigateur ne prend pas en charge
+                l'élément canvas.
+
+            </canvas>
+
+        </section>
+
+    </main>
+
+
+    <!-- ZONE c: le pied de page -->
+
+    <hr>
+
+    <footer id="main-footer">
+
+        <!-- Informations de contact -->
+        <address class="contact-info">
+
+            Le Média Digital
+            <br>
+
+            12 rue de l'Innovation, 75000 Paris
+            <br>
+
+            <a href="mailto:contact@lemediadigital.fr">
+                contact@lemediadigital.fr
+            </a>
+
+        </address>
+
+
+        <!-- Navigation secondaire -->
+        <nav aria-label="Navigation secondaire">
+
+            <ul>
+
+                <li>
+                    <a href="mentions-legales.html">
+                        Mentions légales
+                    </a>
+                </li>
+
+                <li>
+                    <a href="plan-du-site.html">
+                        Plan du site
+                    </a>
+                </li>
+
+                <li>
+                    <a href="politique-confidentialite.html">
+                        Politique de confidentialité
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- Copyright -->
+        <small class="copyright-text">
+            © 2026 - Tous droits réservés
+        </small>
+
+    </footer>
+
+</body>
+
+</html>
