@@ -1,0 +1,136 @@
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Couleurs et typographie */
+body {
+    background-color: #F1F5F9;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1E293B;
+}
+
+/* Sélecteur de groupe */
+h1, h2, h3 {
+    color: #2563EB;
+}
+
+/* En-tête */
+#main-header {
+    background-color: #1E293B;
+    color: #FFFFFF;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Liste de navigation */
+.nav-list {
+    list-style: none;
+}
+
+/* Éléments du menu */
+.nav-item {
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+/* Liens du menu */
+.nav-item a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Effet au survol */
+.nav-item a:hover {
+    color: #60A5FA;
+}
+
+/* Contenu principal */
+#main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cartes des articles */
+.post-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin: 1% 0.5%;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Images responsives */
+.post-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Tableau */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+}
+
+/* Cellules du tableau */
+.data-table th,
+.data-table td {
+    padding: 12px;
+    border-bottom: 1px solid #DDD;
+    text-align: left;
+}
+
+/* En-tête du tableau */
+.data-table th {
+    background-color: #1E293B;
+    color: #FFFFFF;
+}
+
+/* Effet zébré : lignes paires */
+.data-table tbody tr:nth-child(even) {
+    background-color: #E2E8F0;
+}
+
+/* Lignes impaires (facultatif) */
+.data-table tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+/* Zone de transcription */
+.transcript-box {
+    padding: 15px;
+    border-left: 5px solid #2563EB;
+    background-color: #FFFFFF;
+    margin: 15px 0;
+}
+
+/* Pied de page */
+#main-footer {
+    background-color: #1E293B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+/* Informations de contact */
+.contact-info {
+    margin: 15px 0;
+    line-height: 2;
+}
+
+/* Curseur de la FAQ */
+summary {
+    cursor: pointer;
+}
