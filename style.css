@@ -1,136 +1,670 @@
 
-/* Reset CSS */
+
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Couleurs et typographie */
 body {
     background-color: #F1F5F9;
+    color: #1E293B;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #1E293B;
 }
 
 /* Sélecteur de groupe */
+
 h1, h2, h3 {
-    color: #2563EB;
+    color: #1E293B;
 }
 
-/* En-tête */
+a {
+    color: #2563EB;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #F4B942;
+}
+
+a:focus {
+    outline: 2px solid #F4B942;
+    outline-offset: 3px;
+}
+
+a:active {
+    color: #1E293B;
+}
+
+/* Couleur du texte  */
+
+::selection {
+    background-color: #2563EB;
+    color: white;
+}
+
+/* Images et médias responsives */
+
+img,video,canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*  2. EN-TETE ET MENU DE NAVIGATION */
+
 #main-header {
     background-color: #1E293B;
-    color: #FFFFFF;
-    padding: 25px;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
-/* Liste de navigation */
-.nav-list {
-    list-style: none;
+#main-header h1 {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
 }
 
-/* Éléments du menu */
+.site-logo {
+    vertical-align: middle;
+}
+
+/* Suppression des puces */
+
+.nav-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+/* Affichage horizontal des éléments */
+
 .nav-item {
     display: inline-block;
-    margin: 10px 15px;
+    margin: 0 15px;
 }
 
 /* Liens du menu */
+
 .nav-item a {
-    color: #FFFFFF;
+    color: white;
     text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
 }
 
-/* Effet au survol */
+/* Changement de couleur au survol */
+
 .nav-item a:hover {
-    color: #60A5FA;
+    color: #F4B942;
 }
 
-/* Contenu principal */
+
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background-color: #F4B942;
+    transition: width 0.4s ease;
+}
+
+.nav-item a:hover::after,
+.nav-item a:focus::after {
+    width: 100%;
+}
+
+
+/* 3. CONTENU PRINCIPAL */
+
 #main-content {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 90%;
+    margin: 30px auto;
 }
 
-/* Cartes des articles */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+/* Pseudo-élément après les titres */
+
+h2::after {
+    content: " ✦";
+    color: #F4B942;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: #2563EB;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Première lettre décorée */
+
+#hero-section p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2563EB;
+}
+
+mark {
+    background-color: #FEF3C7;
+    padding: 2px 5px;
+}
+
+
+/*  4. VIDEO DE PRESENTATION */
+
+.promo-video {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+/* 5. ARTICLES : MISE EN PAGE EN DEUX COLONNES */
+
+
+#latest-posts {
+    font-size: 0;
+}
+
+
+#latest-posts > h2 {
+    font-size: 24px;
+}
+
+
+
 .post-card {
     display: inline-block;
     vertical-align: top;
     width: 48%;
-    margin: 1% 0.5%;
-    padding: 15px;
-    background-color: #FFFFFF;
-    border: 1px solid #DDD;
+    margin: 1% 0.8%;
+    padding: 20px;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid #CBD5E1;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Images responsives */
+/* Effet au survol des articles */
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.post-card header {
+    margin-bottom: 15px;
+}
+
+.post-date {
+    color: #64748B;
+    font-size: 0.9em;
+}
+
+/* Images des articles */
+
+.post-thumbnail {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
 .post-thumbnail img {
+    display: block;
+    width: 100%;
     max-width: 100%;
     height: auto;
-    display: block;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
 }
 
-/* Tableau */
-.data-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #FFFFFF;
+/* BONUS : zoom des images */
+
+.post-thumbnail img:hover {
+    transform: scale(1.08);
 }
 
-/* Cellules du tableau */
-.data-table th,
-.data-table td {
-    padding: 12px;
-    border-bottom: 1px solid #DDD;
-    text-align: left;
+.post-thumbnail figcaption {
+    color: #64748B;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 8px;
 }
 
-/* En-tête du tableau */
-.data-table th {
+/* Pied des articles */
+
+.post-card footer {
+    margin-top: 15px;
+}
+
+.post-card footer ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.post-card footer li {
+    display: inline-block;
+    background-color: #DBEAFE;
+    color: #1E40AF;
+    padding: 4px 10px;
+    margin: 3px;
+    border-radius: 15px;
+    font-size: 0.85em;
+}
+
+/* Dernier élément de la liste */
+
+.post-card footer li:last-child {
+    background-color: #F4B942;
+    color: #1E293B;
+}
+
+/* Lien Lire la suite */
+
+.post-card footer > a {
+    display: inline-block;
+    background-color: #2563EB;
+    color: white;
+    padding: 9px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.post-card footer > a:hover {
     background-color: #1E293B;
-    color: #FFFFFF;
+    color: white;
+    transform: translateY(-2px);
 }
 
-/* Effet zébré : lignes paires */
-.data-table tbody tr:nth-child(even) {
-    background-color: #E2E8F0;
+/* Flèche après le lien */
+
+.post-card footer > a::after {
+    content: " →";
 }
 
-/* Lignes impaires (facultatif) */
-.data-table tbody tr:nth-child(odd) {
-    background-color: #FFFFFF;
+
+/* 6. PODCAST ET TRANSCRIPTION */
+
+.podcast-player {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Bloc déroulant */
+
+#media-center details {
+    background-color: #F1F5F9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Curseur cliquable */
+
+#media-center summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #1E293B;
+}
+
+/* Marqueur du résumé */
+
+#media-center summary::marker {
+    color: #2563EB;
+}
+
+/* Style lorsque la transcription est ouverte */
+
+#media-center details[open] {
+    background-color: #EFF6FF;
+    border-left: 5px solid #2563EB;
 }
 
 /* Zone de transcription */
+
 .transcript-box {
-    padding: 15px;
+    padding: 20px;
+    margin-top: 15px;
     border-left: 5px solid #2563EB;
-    background-color: #FFFFFF;
-    margin: 15px 0;
+    background-color: white;
+    border-radius: 5px;
 }
 
-/* Pied de page */
+.transcript-box dt {
+    color: #2563EB;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.transcript-box dd {
+    margin-left: 15px;
+}
+
+
+/*7. TABLEAU DES REDACTEURS */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.data-table caption {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    border-bottom: 1px solid #CBD5E1;
+}
+
+/* En-tête du tableau */
+
+.data-table thead {
+    background-color: #1E293B;
+    color: white;
+}
+
+/* Lignes paires */
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #F1F5F9;
+}
+
+/* Lignes impaires */
+
+.data-table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* Survol des lignes */
+
+.data-table tbody tr:hover {
+    background-color: #DBEAFE;
+    transition: background-color 0.3s ease;
+}
+
+/* Pied du tableau */
+
+.data-table tfoot {
+    background-color: #DBEAFE;
+    font-weight: bold;
+}
+
+
+/* 8. ZONE INTERACTIVE */
+
+#interactive-zone img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.stats-canvas {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px auto;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+}
+
+
+/*9. PIED DE PAGE*/
+
 #main-footer {
     background-color: #1E293B;
-    color: #FFFFFF;
+    color: white;
     text-align: center;
-    padding: 25px;
-    margin-top: 30px;
+    padding: 30px 20px;
 }
 
-/* Informations de contact */
+/* Adresse et contact */
+
 .contact-info {
-    margin: 15px 0;
+    font-style: normal;
     line-height: 2;
+    margin-bottom: 20px;
 }
 
-/* Curseur de la FAQ */
-summary {
-    cursor: pointer;
+/* Liens du pied de page */
+
+#main-footer a {
+    color: #F4B942;
+}
+
+#main-footer a:hover {
+    color: white;
+}
+
+/* Navigation secondaire */
+
+#main-footer nav ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#main-footer nav li {
+    display: inline-block;
+    margin: 5px 12px;
+}
+
+.copyright-text {
+    color: #CBD5E1;
+}
+
+
+/*10. PSEUDO-CLASSE :NOT() */
+
+
+#main-content section:not(:first-child) {
+    border-top: 3px solid #DBEAFE;
+}
+
+
+/*11. RESPONSIVE : TABLETTE */
+
+@media screen and (max-width: 900px) {
+
+    #main-header {
+        padding: 20px 10px;
+    }
+
+    .nav-item {
+        margin: 5px 10px;
+    }
+
+    #main-content {
+        width: 95%;
+    }
+
+    .post-card {
+        width: 48%;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+}
+
+
+/* 12. RESPONSIVE : MOBILES */
+
+@media screen and (max-width: 600px) {
+
+    #main-header h1 {
+        font-size: 23px;
+    }
+
+    .nav-list {
+        margin-top: 15px;
+    }
+
+    .nav-item {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #main-content {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    /* Un article par ligne sur mobile */
+
+    .post-card {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .data-table {
+        font-size: 0.8em;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 7px;
+    }
+
+    #main-footer nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+}
+
+
+/*  13. : VERSION iMPRESSION */
+
+@media print {
+
+    body {
+        background: white;
+        color: black;
+        font-family: Arial, sans-serif;
+        font-size: 12pt;
+    }
+
+    /* Masquer les éléments inutiles à l'impression */
+
+    #main-header .navbar,
+    .promo-video,
+    .podcast-player,
+    #interactive-zone,
+    #main-footer nav {
+        display: none !important;
+    }
+
+    /* Supprimer les effets visuel */
+
+    section,
+    .post-card {
+        background: white;
+        color: black;
+        box-shadow: none;
+        border: 1px solid #999;
+        break-inside: avoid;
+    }
+
+    /* Articles sur la largeur */
+
+    #latest-posts {
+        font-size: 12pt;
+    }
+
+    .post-card {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Liens lisibles sur papier */
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+
+    /* Pied de page à l'impression */
+
+    #main-footer {
+        background: white;
+        color: black;
+        border-top: 1px solid #999;
+    }
+
+    #main-footer a {
+        color: black;
+    }
+
+    /* Éviter  */
+
+    h1,
+    h2,
+    h3 {
+        break-after: avoid;
+    }
+
+}
+
+
+/* 14 REDUCTION DES ANIMATIONS */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
 }
