@@ -1,0 +1,675 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Défilement fluides */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style général de la page */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #263238;
+    background-color: #f4f6f8;
+}
+
+/* Les médias  */
+img,video,iframe,canvas {
+    max-width: 100%;
+}
+
+/* Images adaptatives */
+img {
+    display: block;
+    height: auto;
+}
+
+/* Liens */
+a {
+    color: #176b87;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e76f51;
+}
+
+/* 2. EN-TÊTE P*/
+
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 20px 30px;
+
+    color: #ffffff;
+    background-color: #17324d;
+}
+
+/* Logo */
+.site-logo {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+}
+
+/* titre du site */
+#main-header h1 {
+    margin-right: auto;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+/* Navigation principale */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+/* Liste des liens */
+.nav-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    list-style: none;
+}
+
+/* Liens de navigation */
+.nav-item a {
+    display: block;
+    padding: 10px 14px;
+
+    color: #ffffff;
+    border-radius: 6px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Survol des liens */
+.nav-item a:hover {
+    color: #17324d;
+    background-color: #f4c95d;
+}
+
+/* 3. CONTENU PRINCIPAL*/
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+
+    flex: 1;
+}
+
+/* Titres des sections */
+#main-content h2 {
+    margin-bottom: 15px;
+    color: #17324d;
+    font-size: 1.7rem;
+}
+
+/* 4. SECTION D'ACCUEIL */
+
+#hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+/* Titre de la section */
+#hero-section h2 {
+    margin-bottom: 0;
+}
+
+/* Paragraphes */
+#hero-section p {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Vidéo promotionnelle */
+.promo-video {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+/*  5. DERNIERS ARTICLES */
+
+#latest-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Le titre prend toute la largeur */
+#latest-posts h2 {
+    flex-basis: 100%;
+}
+
+/* Carte d'un article */
+.post-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    flex: 1 1 45%;
+    min-width: 0;
+
+    padding: 20px;
+
+    background-color: #ffffff;
+    border: 1px solid #dce3e8;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease,box-shadow 0.3s ease;
+}
+
+/* Effet au survol des articles */
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Titres des articles */
+.post-card h3 {
+    color: #176b87;
+    font-size: 1.3rem;
+}
+
+/* Image de l'article */
+.post-thumbnail {
+    width: 100%;
+}
+
+/* Image dans la figure */
+.post-thumbnail img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+
+    transition: transform 0.4s ease;
+}
+
+/* Zoom l'image au survol */
+.post-thumbnail img:hover {
+    transform: scale(1.03);
+}
+
+/* Légende  l'image */
+.post-thumbnail figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #667780;
+    text-align: center;
+}
+
+/* Pied  chaque article */
+.post-card footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: auto;
+    padding-top: 15px;
+
+    border-top: 1px solid #dce3e8;
+}
+
+/* Liste des informations de l'article */
+.post-card footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+/* Lien de lecture  */
+.post-card footer > a {
+    margin-left: auto;
+    padding: 8px 12px;
+
+    color: #ffffff;
+    background-color: #176b87;
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease;
+}
+
+.post-card footer > a:hover {
+    color: #ffffff;
+    background-color: #e76f51;
+}
+
+/*  6. ESPACE PODCAST ET TRANSCRIPTION */
+
+#media-center {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 25px;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Lecteur audio */
+.podcast-player {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Bloc de détails */
+.summer {
+    padding: 15px;
+
+    background-color: #eef4f6;
+    border-radius: 8px;
+}
+
+/* Texte de transcription */
+.transcript-box {
+    width: 100%;
+    padding: 20px;
+
+    background-color: #f4f6f8;
+    border-left: 4px solid #176b87;
+    border-radius: 6px;
+}
+
+/* Liste de définitions */
+#media-center dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+}
+
+/* Termes de la liste */
+#media-center dt {
+    flex: 0 0 150px;
+    font-weight: bold;
+    color: #17324d;
+}
+
+/* Définitions */
+#media-center dd {
+    flex: 1 1 300px;
+    min-width: 0;
+}
+
+/* 7. CLASSEMENT DES AUTEURS ET TABLEAU */
+
+#authors-ranking {
+    padding: 25px;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Conteneur du tableau */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+/* Cellules du tableau */
+.data-table th,.data-table td {
+    padding: 12px;
+    border: 1px solid #dce3e8;
+    text-align: left;
+}
+
+/* En-tête du tableau */
+.data-table th {
+    color: #ffffff;
+    background-color: #176b87;
+}
+
+/* Lignes paires */
+.data-table tr:nth-child(even) {
+    background-color: #eef4f6;
+}
+
+/* Survol des lignes */
+.data-table tr:hover {
+    background-color: #f4e8c1;
+}
+
+/* 8. ZONE INTERACTIVe */
+
+#interactive-zone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    padding: 25px;
+
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Le titre occupe toute la largeur */
+#interactive-zone h2 {
+    flex-basis: 100%;
+}
+
+/* Sous-titre */
+#interactive-zone h3 {
+    flex-basis: 100%;
+    color: #176b87;
+}
+
+/* Image avec carte interactive */
+#interactive-zone img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Canvas */
+.stats-canvas {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border:2px dashed #003049;
+    background-color: #ffffff;
+}
+
+/*  9. PIED DE PAGE */
+
+#main-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 25px 30px;
+
+    color: #ffffff;
+    background-color: #17324d;
+}
+
+/* Coordonnées */
+.contact-info {
+    font-style: normal;
+}
+
+/* Navigation du pied de page */
+#main-footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    list-style: none;
+}
+
+/* Liens du pied de page */
+#main-footer nav a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+#main-footer nav a:hover {
+    color: #f4c95d;
+}
+
+/* Copyright */
+.copyright-text {
+flex-basis: 100%;
+text-align: center;
+padding-top: 15px;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 10. RESPONSIVE : TABLETTES ET MOBILES */
+
+@media screen and (max-width: 768px) {
+
+    /* En-tête en colonne */
+    #main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Navigation placée avant le logo et le titre */
+    .navbar {
+        order: -1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-list {
+        justify-content: center;
+    }
+
+    /* Titre du site */
+    #main-header h1 {
+        margin-right: 0;
+    }
+
+    /* Articles sur une seule colonne */
+    .post-card {
+        flex-basis: 100%;
+    }
+
+    /* Transcription en colonne */
+    #media-center dl {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #media-center dt {
+        flex-basis: auto;
+    }
+
+    #media-center dd {
+        flex-basis: auto;
+        margin-bottom: 12px;
+    }
+
+    /* Pied de page en colonne */
+    #main-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #main-footer nav ul {
+        justify-content: center;
+    }
+
+    /* Tableau défilant  */
+    #authors-ranking {
+        overflow-x: auto;
+    }
+
+    .data-table {
+        min-width: 500px;
+    }
+}
+
+/* 11. ACCESSIBILITÉ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/*12. BONUS de florian8*/
+
+@media print {
+
+    body {
+        color: #000000;
+        background-color: #ffffff;
+    }
+
+    #main-header,
+    #main-footer {
+        color: #000000;
+        background-color: #ffffff;
+    }
+
+    .navbar,
+    .podcast-player,
+    .promo-video {
+        display: none;
+    }
+
+    #main-content {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .post-card {
+        break-inside: avoid;
+        box-shadow: none;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: underline;
+    }
+}
+
+/* changement de la couleur selon mon goût */
+
+/* Fond général */
+body {
+    background-color: #F3F0E9;
+    color: #34413D;
+}
+
+/* Titres */
+#main-content h2,
+.post-card h3 {
+    color: #344B46;
+}
+
+/* Sections principales */
+#hero-section,
+#media-center,
+#authors-ranking,
+#interactive-zone {
+    background-color: #FFFFFF;
+}
+
+/* Cartes des articles */
+.post-card {
+    background-color: #FFFFFF;
+    border-color: #E5E0D7;
+}
+
+/* Liens */
+a {
+    color: #A85F49;
+}
+
+a:hover {
+    color: #C98268;
+}
+
+/* Boutons Lire la suite */
+.post-card footer > a {
+    background-color: #C98268;
+    color: #FFFFFF;
+}
+
+.post-card footer > a:hover {
+    background-color: #A85F49;
+    color: #FFFFFF;
+}
+
+/* Légendes et dates */
+.post-thumbnail figcaption,
+.post-date {
+    color: #68736F;
+}
+
+/* Transcription */
+.summer,
+.transcript-box {
+    background-color: #DCEAE7;
+}
+
+.transcript-box {
+    border-left-color: #6F9588;
+}
+
+/* Tableau */
+.data-table th {
+    background-color: #344B46;
+    color: #FFFFFF;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #EAF1ED;
+}
+
+.data-table tr:hover {
+    background-color: #DCEAE7;
+}
+
+/* Bordures */
+.post-card footer {
+    border-top-color: #E5E0D7;
+}
+
+/* Pied de page  */
+#main-footer {
+    color: #FFFFFF;
+}
+
